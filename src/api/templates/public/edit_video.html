@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Vídeo</title>
+</head>
+<body>
+    <h1>Editar Vídeo</h1>
+    <form action="/update_video" method="post">
+        <input type="hidden" name="codigo" value="{{ codigo }}">
+        
+        <label for="title">Título:</label>
+        <input type="text" id="title" name="title" value="{{ title }}" required><br><br>
+        
+        <label for="description">Descrição:</label>
+        <textarea id="description" name="description" required>{{ description }}</textarea><br><br>
+        
+        <label for="url">URL:</label>
+        <input type="text" id="url" name="url" value="{{ url }}" required><br><br>
+
+        <label for="img">Imagem:</label>
+        <input type="text" id="img" name="img" value="{{ img }}"><br><br>
+        
+        <label for="ano">Ano:</label>
+        <input type="text" id="ano" name="ano" value="{{ ano }}"><br><br>
+        
+        <input type="submit" value="Atualizar Vídeo">
+    </form>
+
+    <!-- Exibir mensagens de flash -->
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul>
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+</body>
+</html>

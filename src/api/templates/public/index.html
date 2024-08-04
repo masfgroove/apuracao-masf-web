@@ -6,11 +6,16 @@
     <section id="inicio" class="row m-0 p-0">
         <!-- class="row m-0 p-0 - ZERANDO A MARGIN E O PADDING -->
         <div class="col-md-5 d-flex justify-content-center align-items-center flex-column">
-            <h2 class="text-white text-shadow">Marco Antonio</h2>
-            <span id="subtitle" class="text-white">Programador Java e Desenvolvedor SQL</span>
+            <h2 class="text-white text-shadow">U E S M </h2>
+            <h6 class="text-white text-shadow">Em construção 2 </h6>
+            
+            <span id="subtitle" class="text-white">União das Escolas de Samba de Maquete</span>
         </div>
-
-
+        {% if nome %}
+        Olá, {{ nome }}! <a href="/logout">Sair</a>
+    {% else %}
+        <a href="/login">Entrar</a>
+    {% endif %}
     </section>
 
 

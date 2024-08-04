@@ -1,0 +1,15 @@
+/* Se você quiser personalizar ainda mais, pode adicionar estilos aqui */
+
+/* Estilo básico para a sidebar fixa */
+.sidebar {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    overflow-y: auto;
+}
+
+/* Ajuste para o conteúdo principal */
+main {
+    margin-right: 200px; /* Ajuste se necessário */
+}

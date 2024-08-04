@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+
+{% block content %}
+<main id="main">
+    <section id="projetos">
+
+      <div class="container pb-5 pt-5">
+       
+
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Desfiles 2012</button>
+
+        <!-- Modal inicio-->
+        <div class="modal fade" id="myModal" role="dialog">
+          <div class="modal-dialog">
+          
+            
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">UESM</h4>
+              </div>
+              <div class="modal-body">              
+                 <p>Escolha sua escola de samba de maquete</p>
+              
+                       <form action="/desfiles" method="get" >
+                              <select class="form-control" id="escola" name="sellist1">
+                                <option value="r9RJNLJ59J4">Mocidade Masf 2011</option> 
+                                <option value="-d6Mt9d21mM">Mocidade Masf 2012</option>
+                                <option value="GFte8SpoilI">Mocidade Masf 2013</option>
+        
+                                
+                                <option value="5DgoEJ94Rv0">Mocidade Masf 2014</option>
+                                <option value="t-IjcjPPLcc">Mocidade Masf 2015</option>
+                                <option value="KbSqQJGKTFc">Mocidade Masf 2016</option>
+                                <option value="OH2CHdRJ8vc">Mocidade Masf 2017</option>
+                                <option value="GnZGZJqtcn0">Mocidade Masf 2018</option>
+                                <option value="saThFWBEiwc">Mocidade Masf 2019</option>
+                                <option value="iQfv-DhpSYA">Mocidade Masf 2021</option>
+                                <option value="gAQO7I7v730">Mocidade Masf 2022</option>
+                                <option value="Ge9oSxEputg">Mocidade Masf 2023</option>
+                                 
+      
+
+                                
+                             
+                              
+                              </select>
+                              <input type="submit" value="Submit">
+                       </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Sair</button>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        
+        <!-- Modal fim-->
+<!--
+<button type="button" class="btn btn-secondary">Secondary</button>
+<button type="button" class="btn btn-success">Success</button>
+<button type="button" class="btn btn-danger">Danger</button>
+<button type="button" class="btn btn-warning">Warning</button>
+<button type="button" class="btn btn-info">Info</button>
+<button type="button" class="btn btn-light">Light</button>
+<button type="button" class="btn btn-dark">Dark</button>
+-->
+<br><br>        
+
+        <iframe width="1103" height="615"
+                src="https://www.youtube.com/embed/{{ selected_option }}"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        <div class="mt-5 p-4 bg-dark text-white text-center">
+            <p>Footer</p>
+        </div>
+    </div>
+
+
+    </section>
+</main>
+{% endblock %}
