@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com -->
+  <title>UESM</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    body {
+      font: 400 15px Lato, sans-serif;
+      line-height: 1.8;
+      color: #818181;
+    }
+    h2 {
+      font-size: 24px;
+      text-transform: uppercase;
+      color: #303030;
+      font-weight: 600;
+      margin-bottom: 30px;
+    }
+    h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      color: #303030;
+      font-weight: 400;
+      margin-bottom: 30px;
+    }  
+    .jumbotron {
+      background-color: #f4511e;
+      color: #fff;
+      padding: 50px 25px;
+      font-family: Montserrat, sans-serif;
+    }
+    .container-fluid {
+      padding: 60px 50px;
+    }
+    .bg-grey {
+      background-color: #f6f6f6;
+    }
+    .logo-small {
+      color: #f4511e;
+      font-size: 50px;
+    }
+    .logo {
+      color: #f4511e;
+      font-size: 200px;
+    }
+    .thumbnail {
+      padding: 0 0 15px 0;
+      border: none;
+      border-radius: 0;
+    }
+
+    .thumbnail {
+            padding: 15px;
+            border: none;
+            border-radius: 0;
+            margin-bottom: 30px;
+        }
+        .thumbnail iframe {
+            max-width: 100%;
+            height: auto;
+        }
+        .col-sm-4 {
+            padding: 0 15px;
+        }
+        @media (max-width: 767px) {
+            .col-sm-4 {
+                margin-bottom: 30px;
+            }
+        }   
+
+    .thumbnail img {
+      width: 100%;
+      height: 100%;
+      margin-bottom: 10px;
+    }
+    .carousel-control.right, .carousel-control.left {
+      background-image: none;
+      color: #f4511e;
+    }
+    .carousel-indicators li {
+      border-color: #f4511e;
+    }
+    .carousel-indicators li.active {
+      background-color: #f4511e;
+    }
+    .item h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      font-weight: 400;
+      font-style: italic;
+      margin: 70px 0;
+    }
+    .item span {
+      font-style: normal;
+    }
+    .panel {
+      border: 1px solid #f4511e; 
+      border-radius:0 !important;
+      transition: box-shadow 0.5s;
+    }
+    .panel:hover {
+      box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+    }
+    .panel-footer .btn:hover {
+      border: 1px solid #f4511e;
+      background-color: #fff !important;
+      color: #f4511e;
+    }
+    .panel-heading {
+      color: #fff !important;
+      background-color: #f4511e !important;
+      padding: 25px;
+      border-bottom: 1px solid transparent;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+    }
+    .panel-footer {
+      background-color: white !important;
+    }
+    .panel-footer h3 {
+      font-size: 32px;
+    }
+    .panel-footer h4 {
+      color: #aaa;
+      font-size: 14px;
+    }
+    .panel-footer .btn {
+      margin: 15px 0;
+      background-color: #f4511e;
+      color: #fff;
+    }
+    .navbar {
+      margin-bottom: 0;
+      background-color: #f4511e;
+      z-index: 9999;
+      border: 0;
+      font-size: 12px !important;
+      line-height: 1.42857143 !important;
+      letter-spacing: 4px;
+      border-radius: 0;
+      font-family: Montserrat, sans-serif;
+      padding: 0 15px; /* Ajuste o padding para evitar que o conteúdo fique muito próximo das bordas */
+      
+    }
+    .navbar .navbar-brand {
+      padding: 10px 15px; /* Ajuste o padding para melhor alinhamento */
+    }
+    .navbar-brand img {
+      height: 30px; /* Define a altura da imagem */
+      width: auto; /* Mantém a proporção da imagem */
+    }
+    .navbar li a, .navbar .navbar-brand {
+      color: #fff !important;
+    }
+    .navbar-nav li a:hover, .navbar-nav li.active a {
+      color: #f4511e !important;
+      background-color: #fff !important;
+    }
+    .navbar-default .navbar-toggle {
+      border-color: transparent;
+      color: #fff !important;
+    }
+    footer .glyphicon {
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: #f4511e;
+    }
+    .slideanim {visibility:hidden;}
+    .slide {
+      animation-name: slide;
+      -webkit-animation-name: slide;
+      animation-duration: 1s;
+      -webkit-animation-duration: 1s;
+      visibility: visible;
+    }
+    @keyframes slide {
+      0% {
+        opacity: 0;
+        transform: translateY(70%);
+      } 
+      100% {
+        opacity: 1;
+        transform: translateY(0%);
+      }
+    }
+    @-webkit-keyframes slide {
+      0% {
+        opacity: 0;
+        -webkit-transform: translateY(70%);
+      } 
+      100% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+      }
+    }
+    @media screen and (max-width: 768px) {
+      .col-sm-4 {
+        text-align: center;
+        margin: 25px 0;
+      }
+      .btn-lg {
+        width: 100%;
+        margin-bottom: 35px;
+      }
+    }
+    @media screen and (max-width: 480px) {
+      .logo {
+        font-size: 150px;
+      }
+    }
+
+   .thumbnail {
+    padding: 15px; /* Adiciona preenchimento ao redor do conteúdo */
+    border: none;
+    border-radius: 0;
+    margin-bottom: 30px; /* Espaço entre as linhas de thumbnails */
+  }
+
+  .thumbnail iframe {
+    max-width: 100%; /* Garante que o iframe não ultrapasse a largura da coluna */
+    height: auto; /* Ajusta a altura automaticamente mantendo a proporção */
+  }
+
+  .col-sm-4 {
+    padding: 0 15px; /* Adiciona espaçamento horizontal entre as colunas */
+  }
+
+  /* Ajuste o espaçamento em telas menores */
+  @media (max-width: 767px) {
+    .col-sm-4 {
+      margin-bottom: 30px; /* Espaço inferior em telas menores */
+    }
+  }
+  </style>
+  
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+  <nav class="navbar navbar-default navbar-fixed-top" style="background-color: #f4511e;">
+    <div class="container">
+    
+      <div class="navbar-header" >
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="https://uesm.vercel.app/video">
+          <img src="../static/img/logo3.png" alt="Marco Sorrindo todo maravilhoso" width="30" height="30">
+        </a>
+     
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#about">SOBRE</a></li>
+          <li><a href="#services">SERVICES</a></li>
+          <li><a href="#portfolio">DESFILE</a></li>
+          <li><a href="#pricing">PRICING</a></li>
+          <li><a href="/posts">NOTÍCIAS</a></li>
+          
+          <li><a href="#contact">CONTACT</a></li>
+          <li> {% if nome %} <a href="/logout">OLÁ, {{ nome }}!  SAIR</a> {% else %} <a href="/login">Entrar</a> {% endif %}</li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  
+
+<div class="jumbotron text-center" style="background-color: #f4511e;">
+  <h1 style="color: #fff;">U E S M</h1> 
+  <p style="color: #fff;">União das Escolas de Samba de Maquete</p> 
+  
+</div>
+
+<!-- Container (About Section) -->
+<div id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2>Sobre a UESM</h2><br>
+      <h4>A História da União das Escolas de Samba de Maquete</h4><br>
+      <p>A União das Escolas de Samba de Maquete (UESM) tem uma trajetória rica e fascinante que remonta ao início dos anos 2010. A ideia surgiu em um contexto bem diferente do que conhecemos hoje. Tudo começou com a minha paixão por presépios de Natal. Desde a infância, sempre gostei de criar cenários detalhados para o Natal, montando presépios que encantavam a todos ao redor.</p>
+      
+      <p>Foi a partir dessa experiência com os presépios que tive a ideia de expandir minha criatividade para algo ainda mais grandioso: desfiles natalinos em miniatura. A cada ano, a criação dos desfiles se tornava mais elaborada, e a ideia de montar uma mini escola de samba de maquete começou a tomar forma. O projeto foi crescendo e, em 2012, a UESM foi oficialmente fundada.</p>
+      
+      <p>Nos primeiros anos, a UESM se destacou pela sua inovação e pela dedicação ao detalhamento dos desfiles. A escola ganhou reconhecimento rapidamente, atraindo a atenção de entusiastas do carnaval e do universo das maquetes. Durante os desfiles, os participantes podiam ver representações precisas e vibrantes do espírito do carnaval em uma escala reduzida, mas com uma riqueza de detalhes impressionante.</p>
+      
+      <p>Apesar de enfrentar desafios ao longo dos anos, a UESM manteve seu compromisso com a tradição e a criatividade. No entanto, em 2023, enfrentamos uma situação difícil com a perda de dados e o roubo de informações pessoais. Apesar desses contratempos, nosso site, <a href="http://www.uesm.com.br" target="_blank">www.uesm.com.br</a>, continua sendo o ponto de encontro para ver desfiles passados e se atualizar sobre as novidades do carnaval.</p>
+      
+      <p>Estamos determinados a seguir em frente, celebrando a cultura carnavalesca e mantendo viva a tradição da UESM. Esperamos que todos desfrutem dos nossos desfiles e se envolvam com a nossa comunidade, que continua a vibrar com o espírito do carnaval, mesmo em miniatura.</p>
+      <br><button class="btn btn-default btn-lg">Entre em Contato</button>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-signal logo"></span>
+    </div>
+  </div>
+</div>
+
+    <!-- Container (Portfolio Section) -->
+    <div id="portfolio" class="container-fluid text-center bg-grey">
+      <h2>Desfiles</h2><br>
+      <h4>Escolha um vídeo por título:</h4>
+      <form method="get" action="/video">
+          <div class="form-group">
+              <select name="title" class="form-control" onchange="this.form.submit()">
+                  
+                  {% for title in titles %}
+                  <option value="{{ title }}" {% if selected_title == title %}selected{% endif %}>
+                      {{ title }}
+                  </option>
+                  {% endfor %}
+              </select>
+          </div>
+      </form>
+      <div class="row text-center slideanim">
+          <!-- Loop through the videos data to dynamically create thumbnails -->
+          {% for video in videos %}
+          <div class="col-sm-4">
+              <div class="thumbnail">
+                  <iframe width="560" height="315"
+                    data-url="{{ video[3] }}"
+                    title="YouTube video player" frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  <p><strong>{{ video[1] }}</strong></p>
+                  <button type="button" class="btn btn-primary" onclick="window.location.href='{{ video[3] }}'">
+                      Veja aqui 
+                  </button>
+              </div>
+          </div>
+          {% endfor %}
+      </div><br>
+  </div>
+  <!-- Inclua o jQuery e o Bootstrap JS aqui -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <!-- Adicione o seu script JavaScript aqui -->
+  <script>
+    function getYouTubeVideoID(url) {
+      // Regex para encontrar o ID do vídeo no URL
+      const regex = /(?:https?:\/\/)?(?:www\.)?youtube\.com\/(?:[^\/\n\s]+\/\S+\/|v\/|embed\/|watch\?v=|watch\?.+&v=|watch\/|user\/\S+\/\S+\/|user\/\S+\/|channel\/\S+\/|playlist\?list=|shorts\/|)([a-zA-Z0-9_-]{11})/;
+      const match = url.match(regex);
+      return match ? match[1] : null;
+    }
+
+    function updateIframes() {
+      // Seleciona todos os iframes dentro da seção de vídeos
+      document.querySelectorAll('.thumbnail iframe').forEach(function(iframe) {
+        const videoUrl = iframe.getAttribute('data-url');
+        const videoID = getYouTubeVideoID(videoUrl);
+        if (videoID) {
+          iframe.src = `https://www.youtube.com/embed/${videoID}`;
+        } else {
+          console.error('ID do vídeo não encontrado para URL:', videoUrl);
+        }
+      });
+    }
+
+    // Atualiza os iframes quando a página carrega
+    document.addEventListener('DOMContentLoaded', updateIframes);
+  </script>
+
+
+<!-- Container (Services Section) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de Vídeos</title>
+    <!-- Inclua o Bootstrap CSS aqui -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <style>
+        .container-fluid {
+            padding: 20px;
+        }
+        .form-container {
+            margin-bottom: 30px;
+        }
+        .table-container {
+            margin-top: 30px;
+        }
+        .btn-primary {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Container (Services Section) -->
+    <div id="services" class="container-fluid text-center">
+        <h2>GERENCIADOR DE VIDEOS</h2>
+
+        <!-- Formulário para adicionar novos vídeos -->
+      
+
+        <!-- Lista de Vídeos -->
+        <div class="row table-container">
+            <div class="col-sm-12">
+                <h2>Lista de Vídeos</h2>
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Título</th>
+                            <th>Descrição</th>
+                            <th>URL</th>
+                            <th>Imagem</th>
+                            <th>Ano</th>
+                            <th>Ação</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for video in videos %}
+                        <tr>
+                            <td>{{ video[0] }}</td>
+                            <td>{{ video[1] }}</td>
+                            <td>{{ video[2] }}</td>
+                            <td>{{ video[3] }}</td>
+                            <td>{{ video[4] }}</td>
+                            <td>{{ video[5] }}</td>
+                            <td>
+                                <button onclick="fillEditForm('{{ video[0] }}', '{{ video[1] }}', '{{ video[2] }}', '{{ video[3] }}', '{{ video[4] }}', '{{ video[5] }}')" class="btn btn-warning">Alterar</button>
+                                
+                                <form action="{{ url_for('delete_video') }}" method="post" style="display:inline;">
+                                    <input type="hidden" name="codigo" value="{{ video[0] }}">
+                                    <input type="submit" class="btn btn-danger" value="Excluir" onclick="return confirm('Tem certeza que deseja excluir este vídeo?');">
+                                </form>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Formulário para adicionar um novo vídeo -->
+        <div class="row form-container">
+            <div class="col-sm-12">
+                <h2>Adicionar Novo Vídeo</h2>
+                <form action="/add_video" method="post">
+                    <div class="form-group">
+                        <label for="title">Título:</label>
+                        <input type="text" class="form-control" id="title" name="title" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Descrição:</label>
+                        <textarea class="form-control" id="description" name="description" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="url">URL:</label>
+                        <input type="text" class="form-control" id="url" name="url" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="img">Imagem:</label>
+                        <input type="text" class="form-control" id="img" name="img">
+                    </div>
+                    <div class="form-group">
+                        <label for="ano">Ano:</label>
+                        <input type="text" class="form-control" id="ano" name="ano">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Adicionar Vídeo</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Formulário para editar um vídeo -->
+        <div class="row form-container">
+            <div class="col-sm-12">
+                <h2>Editar Vídeo</h2>
+                <form action="/update_video" method="post">
+                    <input type="hidden" id="edit_codigo" name="codigo">
+                    <div class="form-group">
+                        <label for="edit_title">Título:</label>
+                        <input type="text" class="form-control" id="edit_title" name="title" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="edit_description">Descrição:</label>
+                        <textarea class="form-control" id="edit_description" name="description" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="edit_url">URL:</label>
+                        <input type="text" class="form-control" id="edit_url" name="url" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="edit_img">Imagem:</label>
+                        <input type="text" class="form-control" id="edit_img" name="img">
+                    </div>
+                    <div class="form-group">
+                        <label for="edit_ano">Ano:</label>
+                        <input type="text" class="form-control" id="edit_ano" name="ano">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Atualizar Vídeo</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Exibir mensagens de flash -->
+        <div class="row">
+            <div class="col-sm-12">
+                {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                <div class="alert alert-info">
+                    <ul>
+                        {% for message in messages %}
+                        <li>{{ message }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endif %}
+                {% endwith %}
+            </div>
+        </div>
+    </div>
+
+    <!-- Inclua o jQuery e o Bootstrap JS aqui -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <script>
+        function fillEditForm(codigo, title, description, url, img, ano) {
+            document.getElementById('edit_codigo').value = codigo;
+            document.getElementById('edit_title').value = title;
+            document.getElementById('edit_description').value = description;
+            document.getElementById('edit_url').value = url;
+            document.getElementById('edit_img').value = img;
+            document.getElementById('edit_ano').value = ano;
+        }
+    </script>
+</body>
+</html>
+
+
+  
+
+<!-- Container (Pricing Section) -->
+<div id="pricing" class="container-fluid">
+  <div class="text-center">
+    <h2>Pricing</h2>
+    <h4>Choose a payment plan that works for you</h4>
+  </div>
+
+
+  <div class="row slideanim">
+    <div class="col-sm-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Basic</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>20</strong> Lorem</p>
+          <p><strong>15</strong> Ipsum</p>
+          <p><strong>5</strong> Dolor</p>
+          <p><strong>2</strong> Sit</p>
+          <p><strong>Endless</strong> Amet</p>
+        </div>
+        <div class="panel-footer">
+          <h3>$19</h3>
+          <h4>per month</h4>
+          <button class="btn btn-lg">Sign Up</button>
+        </div>
+      </div>      
+    </div>     
+   
+  </div>
+</div>
+
+<!-- Container (Contact Section) -->
+<div id="contact" class="container-fluid bg-grey">
+  <h2 class="text-center">CONTACT</h2>
+  <div class="row">
+    <div class="col-sm-5">
+      <p>Contact us and we'll get back to you within 24 hours.</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span> Chicago, US</p>
+      <p><span class="glyphicon glyphicon-phone"></span> +00 1515151515</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> myemail@something.com</p>
+    </div>
+    <div class="col-sm-7 slideanim">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <button class="btn btn-default pull-right" type="submit">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Image of location/map -->
+<img src="/w3images/map.jpg" class="w3-image w3-greyscale-min" style="width:100%">
+
+<footer class="container-fluid text-center" style="background-color: #f4511e;">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p>União das Escolas de Samba de Maquete <a href="https://www.uesm.com.br" title="UESM">www.uesm.com.br</a></p>
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+
+</body>
+</html>

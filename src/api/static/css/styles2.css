@@ -1,0 +1,28 @@
+body {
+    background-color: #f8f9fa;
+    color: #212529;
+}
+
+.navbar {
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #007bff;
+}
+
+.list-group-item {
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.list-group-item:hover {
+    background-color: #e9ecef;
+}
+
+#displayArea {
+    padding: 20px;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    background-color: #ffffff;
+}
