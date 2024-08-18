@@ -4,161 +4,88 @@
 <main id="main">
     <section id="projetos">
         <div class="container pb-5 pt-5">
-
             <h2 class="pb-4">Projetos</h2>
-
-                <div id="carouselProjeto" class="carousel carousel-dark slide" data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselProjeto" data-bs-slide-to="0" class="active"
-                        aria-current="true" aria-label="Slide 1"></button>
-                    <!--                 <button type="button" data-bs-target="#carouselProjeto" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button> -->
-
-                </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active" data-bs-interval="10000">
-
-                        <div class="card-group">
-                            <div class="card">
-                                <img src="../../static/img/portifolio2.jpg"  height="250" width="100" class="card-img-top"
-                                    alt="Imagem Polvo em forma de um Banco">
-                                <div class="card-body">
-                                    <h5 class="card-title">Meu PortifÃ³lio</h5>
-                                    <p class="card-text">Projeto Desenvolvido, utilizando as tecnologias Python, Vercel,HTML, CSS, Bootstrap e Javascript.</p>
-                                    <div class="d-flex justify-content-center">
-                                        <a href="https://github.com/masfgroove/Meu-Site" target="_blank"
-                                            class="btn btn-outline-primary"><i class="bi bi-github"></i>
-                                            Clique
-                                            para saber mais...</a>
-                                    </div>
-                                </div>
-                                <div class="card-footer d-flex justify-content-center">
-
-                                    <a href="https://masf.vercel.app/" target="_blank"
-                                            class="btn btn-outline-primary"><i class="bi bi-github"></i>
-                                            Clique
-                                            para ver o site...</a>
-                                </div>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                <!-- Primeiro Projeto -->
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="../../static/img/portifolio2.jpg" class="card-img-top" alt="Imagem Portfólio" style="object-fit: cover; height: 250px;">
+                        <div class="card-body">
+                            <h5 class="card-title">Meu Portfólio</h5>
+                            <p class="card-text">Projeto Desenvolvido, utilizando as tecnologias Python, Vercel, HTML, CSS, Bootstrap e Javascript.</p>
+                            <div class="d-flex justify-content-center">
+                                <a href="https://github.com/masfgroove/Meu-Site" target="_blank" class="btn btn-outline-primary"><i class="bi bi-github"></i> Clique para saber mais...</a>
                             </div>
-                            <div class="card">
-                                <img src="../../static/img/componentes1.jpg" height="250" width="100" class="card-img-top"
-                                    alt="Logotipo proef entrevista">
-                                <div class="card-body">
-                                    <h5 class="card-title">Projeto Java JPA Wildfly</h5>
-                                    <p class="card-text">Temos aqui um CRUD Java Web com Wildfly Primafaces. O termo CRUD é amplamente utilizado na programação para descrever as quatro operações básicas que podem ser feitas em dados persistentes: Create (Criar), Read (Ler), Update (Atualizar) e Delete (Excluir). Quando implementamos essas operações em um projeto Java Web utilizando tecnologias como JSF, PrimeFaces, JPA e EJBs, é comum referir-se a isso como um CRUD Java Web. Isso descreve de forma sucinta a funcionalidade principal do seu sistema: a capacidade de criar, ler, atualizar e excluir registros de um banco de dados por meio de uma interface web..     
-                                    <div class="d-flex justify-content-center">
-                                        <a href="https://github.com/masfgroove/infotera" target="_blank"
-                                            class="btn btn-outline-primary"><i class="bi bi-github"></i>
-                                            Clique
-                                            para saber mais...</a>
-                                    </div>
-
-                                </div>
-                                <div class="card-footer d-flex justify-content-center">
-
-                                    <a href="https://masf.vercel.app/imagemp1" target="_blank"
-                                            class="btn btn-outline-primary"><i class="bi bi-github"></i>
-                                            Imagens do Projeto</a>
-                                </div>
-                            </div>
-
-                           
-
-
                         </div>
-
-
-                    </div>
-              
-
-
-        </div>
-
-<br><br>
-
-        
-        <div class="carousel-inner">
-        <div class="carousel-item active" data-bs-interval="10000">
-
-            <div class="card-group">
-                <div class="card">
-                    <img src="../../static/img/portifolio2.jpg"  height="250" width="100" class="card-img-top"
-                        alt="Imagem Polvo em forma de um Banco">
-                    <div class="card-body">
-                        <h5 class="card-title">AplicaÃ§Ã£o CRUD em Java Spring</h5>
-                        <p class="card-text">
-
-                            <strong>TÃ­tulo:</strong> AplicaÃ§Ã£o CRUD em Java Spring
-            <br><br>
-            <strong>Descrição:</strong><br>
-            Desenvolvi uma aplicação CRUD em Java utilizando o framework Spring. Este projeto foi uma oportunidade empolgante para aplicar meus conhecimentos em 
-            programação Java e explorar as capacidades do Spring para desenvolvimento web.
-            <br><br>
-            <strong>Recursos e Tecnologias Utilizadas:</strong><br>
-            - Java<br>
-            - Spring Framework<br>
-            - Hibernate<br>
-            - Thymeleaf (ou outro mecanismo de template)<br>
-            - MySQL (ou outro banco de dados)
-            <br><br>
-            <strong>Funcionalidades Implementadas:</strong><br>
-            - Operações CRUD completas para uma entidade específica (por exemplo, Usuários, Produtos, etc.)<br>
-            - Validação de dados de entrada<br>
-            - Integração com banco de dados para persistência de dados<br>
-            - Interface de usuário amigável e responsiva
-            <br><br>
-            <strong>Aprendizados e Desafios:</strong><br>
-            Durante o desenvolvimento deste projeto, aprendi a configurar um ambiente de desenvolvimento Java Spring, a implementar operações CRUD básicas e a lidar com a integração entre o backend e o banco de dados. Enfrentei desafios ao lidar com a configuração do Spring e Hibernate, mas com persistÃªncia e pesquisa, 
-            consegui superar esses obstáculos e entregar uma aplicação funcional e robusta.
-            <br><br>
-            <strong>Próximos Passos:</strong><br>
-            Para futuras melhorias, pretendo implementar autenticação de usuários, paginação de resultados e uma 
-            interface mais moderna e interativa utilizando tecnologias front-end como React ou Angular.
-            <br><br>
-            <strong>ConclusÃ£o:</strong><br>
-            Este projeto foi uma oportunidade valiosa para aplicar meus conhecimentos em Java Spring em um contexto prático. 
-            Estou ansioso para continuar a explorar e expandir minhas habilidades em desenvolvimento de software.
-        </p>
-                        <div class="d-flex justify-content-center">
-                            <a href="https://github.com/masfgroove/java_spring" target="_blank"
-                                class="btn btn-outline-primary"><i class="bi bi-github"></i>
-                                Clique
-                                para saber mais...</a>
+                        <div class="card-footer d-flex justify-content-center">
+                            <a href="https://masf.vercel.app/" target="_blank" class="btn btn-outline-primary"><i class="bi bi-github"></i> Clique para ver o site...</a>
                         </div>
                     </div>
-                    <div class="card-footer d-flex justify-content-center">
-
-                        <a href="https://masf.vercel.app/imagemp2" target="_blank"
-                                class="btn btn-outline-primary"><i class="bi bi-github"></i>
-                                Clique
-                                para ver as imagens..</a>
+                </div>
+                <!-- Segundo Projeto -->
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="../../static/img/componentes1.jpg" class="card-img-top" alt="Imagem Projeto Java" style="object-fit: cover; height: 250px;">
+                        <div class="card-body">
+                            <h5 class="card-title">Projeto Java JPA Wildfly</h5>
+                            <p class="card-text">CRUD Java Web com Wildfly, PrimeFaces, JPA e EJBs. Implementa operações CRUD completas em um sistema web.</p>
+                            <div class="d-flex justify-content-center">
+                                <a href="https://github.com/masfgroove/infotera" target="_blank" class="btn btn-outline-primary"><i class="bi bi-github"></i> Clique para saber mais...</a>
+                            </div>
+                        </div>
+                       
                     </div>
                 </div>
-                
-               
-
-
+                <!-- Terceiro Projeto -->
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="../../static/img/thymeleaf.png" class="card-img-top" alt="Imagem Aplicação CRUD" style="object-fit: cover; height: 250px;">
+                        <div class="card-body">
+                            <h5 class="card-title">Aplicação CRUD em Java Spring</h5>
+                            <p class="card-text">
+                                Desenvolvi uma aplicação CRUD em Java utilizando o Spring Framework, Hibernate, Thymeleaf e MySQL. Implementa operações CRUD completas com interface amigável.
+                            </p>
+                            <div class="d-flex justify-content-center">
+                                <a href="https://github.com/masfgroove/java_spring" target="_blank" class="btn btn-outline-primary"><i class="bi bi-github"></i> Clique para saber mais...</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Quarto Projeto -->
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="../../static/img/react3.png" class="card-img-top" alt="Imagem Java Spring Boot com React" style="object-fit: cover; height: 250px;">
+                        <div class="card-body">
+                            <h5 class="card-title">Java Spring Boot com React</h5>
+                            <p class="card-text">
+                                Projeto utilizando Java Spring Boot no backend e React no frontend, com operações CRUD completas e integração com banco de dados.
+                            </p>
+                            <div class="d-flex justify-content-center">
+                                <a href="https://github.com/masfgroove/Spring-Boot-React/tree/main" target="_blank" class="btn btn-outline-primary"><i class="bi bi-github"></i> Clique para saber mais...</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Quinto Projeto -->
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="../../static/img/react3.png" class="card-img-top" alt="Imagem do Projeto em React" style="object-fit: cover; height: 250px;">
+                        <div class="card-body">
+                            <h5 class="card-title">Projeto em React</h5>
+                            <p class="card-text">
+                                Projeto desenvolvido utilizando React e hospedado na Vercel. Focado em criar uma aplicação interativa e responsiva.
+                            </p>
+                            <div class="d-flex justify-content-center">
+                                <a href="https://github.com/masfgroove/meu-projeto-react" target="_blank" class="btn btn-outline-primary"><i class="bi bi-github"></i> Clique para saber mais...</a>
+                            </div>
+                        </div>
+                        <div class="card-footer d-flex justify-content-center">
+                            <a href="https://meu-projeto-react-three.vercel.app/" target="_blank" class="btn btn-outline-primary"><i class="bi bi-github"></i> Clique para ver o site...</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-
         </div>
-  
-
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
     </section>
 </main>
 {% endblock %}
